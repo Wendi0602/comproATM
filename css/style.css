@@ -14,7 +14,6 @@
 body {
   font-family: "Poppins", sans-serif;
   color: #000000;
-  min-height: 2000px;
 }
 
 .navbar {
@@ -251,13 +250,21 @@ body {
 
 .cd-horizontal-timeline .events-wrapper::before {
   left: 0;
-  background-image: -webkit-linear-gradient(left, #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: -webkit-linear-gradient(
+    left,
+    #f8f8f8,
+    rgba(248, 248, 248, 0)
+  );
   background-image: linear-gradient(to right, #f8f8f8, rgba(248, 248, 248, 0));
 }
 
 .cd-horizontal-timeline .events-wrapper::after {
   right: 0;
-  background-image: -webkit-linear-gradient(right, #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: -webkit-linear-gradient(
+    right,
+    #f8f8f8,
+    rgba(248, 248, 248, 0)
+  );
   background-image: linear-gradient(to left, #f8f8f8, rgba(248, 248, 248, 0));
 }
 
@@ -632,15 +639,204 @@ body {
 /* Proyek Terkerjakan end */
 
 .Contacts {
-  padding: 8rem 7% 1.4rem;
+  padding: 6rem 7% 1.4rem;
+
+  margin-bottom: 2rem;
+}
+
+.Contacts p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  line-height: 1.6;
 }
 
 .Contacts h2 {
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 0.5rem;
+  height: 100%;
 }
 
+/* contact section */
+.Contacts .row {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.Contacts .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+
+  border-radius: 0.5rem;
+  border-color: #000000;
+}
+
+.Contacts .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.custom-input {
+  width: 90%;
+  text-align: center;
+  height: 50px;
+}
+
+.Contacts .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  border: 1px solid #000000;
+  padding-left: 2rem;
+  border-radius: 0.5rem;
+}
+
+.Contacts .row .btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 1.4rem;
+  color: white;
+  background-color: #1f2c56;
+  text-shadow: 1px 1px 3px #000000;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.Contacts .row form .input-group input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  background: none;
+}
+.Contacts .row .btn:hover {
+  background-color: #00ba89;
+  color: #f8f8f8;
+  text-shadow: #000000;
+}
+
+.Contacts .row .input-group .custom-input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.5rem;
+  background: none;
+}
+
+footer img {
+  height: 60px;
+  margin-bottom: 20px;
+}
+footer {
+  width: 100%;
+  bottom: 0;
+  background: linear-gradient(to right, #006f51, #1f2c56);
+  color: #fff;
+  padding: 30px 0 30px;
+  padding-left: 8rem;
+
+  font-size: 15px;
+  line-height: 20px;
+}
+
+footer .row {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+footer .col h3 {
+  width: fit-content;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+footer .col {
+  flex-basis: 25%;
+  padding: 10px;
+}
+
+.email-id {
+  width: fit-content;
+  border-bottom: 1px solid#ccc;
+  margin: 10px 0;
+}
+
+.col ul li {
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+.col ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.col form {
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 50px;
+}
+
+.col form i {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.col form input {
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+  padding-left: 15px;
+}
+
+.col form button {
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.col form button {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.social-icons .sosial {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #000;
+  background: #fff;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.garis-horizontal {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+}
+
+.garis-horizontal {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
 /* Media Queries */
 /* Laptop */
 @media (max-width: 1366px) {
@@ -677,6 +873,10 @@ body {
 
   .company .row .about-img img {
     height: 24rem;
+  }
+
+  .Contacts .row {
+    flex-wrap: wrap;
   }
 }
 /* Mobile Phone */
