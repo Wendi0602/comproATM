@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport " content="width=device-width, initial-scale=1.0" />
+    <title>ATM</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/stylePutra.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link href="timeline-master/dist/css/timeline.min.css" rel="stylesheet">
+    <style>
+      /** Paralax Home Page */
+      .paralax1 {
+          background-size: cover;
+          background-position: center center;
+      }
+  
+      .paralax1 {
+          padding: 50px;
+          margin-bottom: -50px;
+          background-image: url('img/wp2.png');
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+          background-position: fixed;
+          background-size: cover;
+          position: relative;
+      }
+  
+      .paralax1 {
+          background-position: center center;
+      }
+  
+      .paralax2 {
+          padding: 100px;
+          height: 650px;
+          color: white; 
+          background-image: url('img/4.jpg');
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+          background-position: fixed;
+          background-size: cover;
+          position: relative;
+      }
+  
+      @media (max-width: 992px) {
+            .card-putra {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .card-putra {
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card-putra.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+  </style>
+
+    
+    <!-- Feathers Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="img/ATM master logo versi 3.png" alt="LogoATM" width="120" height="auto" />
+      </a>
+
+      <input type="checkbox" id="check">
+      <label for="check" class="icons">
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <i class='bx bx-x' id="close-icon"></i>
+      </label>
+
+      <nav class="NAVBAR">
+        <a href="#" style="--i:0;">Home</a>
+        <a href="#about" style="--i:1;">Company</a>
+        <a href="#It" style="--i:2;">IT Solution</a>
+        <a href="#News" style="--i:3;">News & Media</a>
+        <a href="#kontak" style="--i:4;">Contact</a>
+      </nav>
+    </header>
+    
+    <section class="paralax2 d-flex justify-content-center align-items-center">
+      <!-- <div class="content"> -->
+        <h1 class="h1-hero">Tentang Kami</h1>
+      <!-- </div> -->
+    </section>
+
+    <section class="tentang-kami pb-5">
+        <div class="container">
+            <div class="text-center">
+                <h3 class="fs-1">PT Artha Teknologi Mahakarya</h3>
+                <p class="paragraf">adalah sebuah perusahaan yang berdiri di tahun 2017 yang berfokus pada pembuatan dan pengembangan sistem berbasis Digital. Kami selalu berusaha dalam memberikan servis dan produk terbaik untuk Anda dalam membantu pengembangan pada sektor Digitalisasi Perusahaan Anda untuk meningkatkan efektifitas serta efesiensi kegiatan Bisnis Anda.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 text-center">
+                    <h3>VISI</h3>
+                    <p class="paragraf">Menjadi Perusahaan yang berkomitmen dalam membantu pada sektor Digitalisasi agar terciptanya keselarasan yang terintegrasi dalam setiap komponen kegiatan Digitalisasi.</p>
+                </div>
+                <div class="col-md-6 col-sm-6 text-center">
+                    <h3>MISI</h3>
+                    <p class="paragraf">Mendengarkan, meformulasikan dan memberikan sebuah solusi serta ide terbaik dari kebutuhan Klien.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="paralax1 p-5">
+        <h2>Perjalan Yang Semakin Panjang</h2>
+        <div class="timeline" style="position: relative; z-index: 2;">
+          <div class="timeline__wrap">
+            <div class="timeline__items">
+              <div class="timeline__item">
+                <div class="timeline__content">
+                  <h2>2017</h2>
+                  <p>Didirikan.</p>
+                </div>
+              </div>
+              <div class="timeline__item">
+                <div class="timeline__content">
+                  <h2>2018</h2>
+                  <p>Perusahaan IT Soluitions dalam pembuatan sistem dan Mobile Apps </p>
+                </div>
+              </div>
+              <div class="timeline__item">
+                <div class="timeline__content">
+                  <h2>2019</h2>
+                  <p>Membuat Produk Education Technology yaitu "KampusKita"
+                </p>
+                </div>
+              </div>
+              <div class="timeline__item">
+                <div class="timeline__content">
+                  <h2>2022</h2>
+                  <p>Melebarkan sayap dan berkolaborasi secara B2B dalam memberikan solusi digitalisasi untuk Enterprise</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="pt-5" style="background-color: rgb(85, 167, 214); padding-bottom: 50px;">
+      <h2 class="text-center my-5 pt-5">Anggota Kami</h2>
+  
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="card-putra my-2 col-lg-4 col-md-6 text-center">
+                  <div class="card">
+                      <img src="img/user.png" class="card-img-top" alt="img/user.png">
+                      <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="card-putra my-2 col-lg-4 col-md-6 text-center ">
+                  <div class="card">
+                      <img src="img/user.png" class="card-img-top" alt="img/user.png">
+                      <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="card-putra my-2 col-lg-4 col-md-6 text-center">
+                  <div class="card">
+                      <img src="img/user.png" class="card-img-top" alt="img/user.png">
+                      <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="card-putra my-2 col-lg-4 col-md-6 text-center">
+                  <div class="card">
+                      <img src="img/user.png" class="card-img-top" alt="img/user.png">
+                      <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="card-putra my-2 col-lg-4 col-md-6 text-center">
+                  <div class="card">
+                      <img src="img/user.png" class="card-img-top" alt="img/user.png">
+                      <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <script src="timeline-master/dist/js/timeline.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      window.addEventListener('scroll', () => {
+        const TopBar = document.querySelector('.header');
+
+        if (window.scrollY > 0) {
+          TopBar.classList.add('scrolled');
+        } else {
+          TopBar.classList.remove('scrolled');
+        }
+      });
+
+      timeline(document.querySelectorAll('.timeline'), {
+        forceVerticalMode: 800,
+        mode: 'horizontal',
+        visibleItems: 2
+      });
+
+      document.addEventListener("DOMContentLoaded", function() {
+            const cards = document.querySelectorAll('.card-putra');
+
+            function checkScroll() {
+                cards.forEach((card, index) => {
+                    if (isVisible(card)) {
+                        setTimeout(() => {
+                            card.classList.add('in-view');
+                        }, index * 500); // Delay each card by 300ms
+                    }
+                });
+            }
+
+            function isVisible(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            window.addEventListener('scroll', checkScroll);
+            checkScroll(); // Run on page load
+        });
+    </script>
+  </body>
+</html>
