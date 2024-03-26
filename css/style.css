@@ -16,7 +16,60 @@ body {
   color: #000000;
 }
 
-.navbar {
+/* slider layanan kami */
+  .body {
+    background-image:
+      linear-gradient(
+        to top right, #8B5CF6, #EC4899
+      );
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+  }
+
+  .slider-local {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .item-local {
+    position: absolute;
+    width: 350px;
+    height: 300px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.5s;
+    left: calc(50% - 120px);
+    top: 0;
+  }
+
+  #next, #prev {
+    position: absolute;
+    top: 40%;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    font-size: xxx-large;
+    font-family: monospace;
+    font-weight: bold;
+    left: 50px;
+  }
+
+  #next {
+    left: unset;
+    right: 50px;
+  }
+
+/* end Slider layanan kami */
+
+/* .topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,9 +81,17 @@ body {
   left: 0;
   right: 0;
   z-index: 9999;
+  transition: background-color 0.3s ease-in-out; 
 }
 
-.navbar .navbar-nav a {
+.topbar.scrolled {
+  background-color: white;
+  border-bottom: 1px solid #000000;
+  opacity: 0.98;
+}
+
+.topbar .topbar-top a {
+  text-decoration: none;
   color: #000000;
   display: inline-block;
   font-size: 1.2rem;
@@ -38,11 +99,11 @@ body {
   font-weight: 700;
 }
 
-.navbar .navbar-nav a:hover {
+.topbar .topbar-top a:hover {
   color: #0ead0e;
 }
 
-.navbar .navbar-nav a::after {
+.topbar .topbar-top a::after {
   content: "";
   display: block;
   padding-bottom: 0.5rem;
@@ -51,73 +112,220 @@ body {
   transition: 0.2s linear;
 }
 
-.navbar .navbar-nav a:hover::after {
+.topbar .topbar-top a:hover::after {
   transform: scaleX(0.5);
 }
 
-.navbar .navbar-ekstra a {
+.topbar .navbar-extra a {
   margin: 0 0.5rem;
 }
 
-.navbar .navbar-ekstra a:hover {
+.topbar .navbar-extra a:hover {
   color: #00ff00;
 }
 
-#hamburger-menu {
+  #hamburger-menu {
+    display: none;
+  } */
+/* HeroSection */
+/* .hero {
+  background-color: cyan;
+  width: 100%;
+}
+
+/* ! Navbar Terbaru */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.1rem 10%;
+  /* background: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(70px); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, .9);
+  backdrop-filter: blur(70px);
+  z-index: -1;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+  transition: .5s;
+}
+
+.header:hover::after {
+  left: 100%;
+}
+
+.NAVBAR a {
+  transition: .3s ease;
+  font-size: 1.15rem;
+  color: #1f2c56;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 2.5rem;
+}
+
+#check {
   display: none;
 }
-/* HeroSection */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  background-image: url(../img/wpp-pt.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+
+.icons {
+  right: 5%;
+  position: absolute;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2.8rem;
+  display: none;
+}
+
+.header.scrolled {
+  transition: .5s ease;
+  background-color: #fff;
+  box-shadow: 0px 1px 30px -6px rgba(0, 0, 0, 0.5);
+  /* color: #1f2c56; */
+  /* border-bottom: 1px solid #000000;
+  opacity: 0.98; */
+}
+
+.header.scrolled a {
+  transition: .5s ease;
+  color: #1f2c56;
+}
+
+@media (max-width: 992px) {
+  .header {
+    padding: 1.3rem 5%;
+  }
+
+  .icons {
+    color: #1f2c56;
+    display: inline-flex;
+  }
+
+  #check:checked~.icons #menu-icon {
+    display: none;
+  }
+
+  .icons #close-icon {
+    display: none;
+  }
+
+  #check:checked~.icons #close-icon {
+    display: block;
+  }
+
+  .NAVBAR {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 .5rem 1rem rgba( 0, 0, 0, .1);
+    overflow: hidden;
+    transition: .3s ease;
+  }
+  
+  #check:checked~.NAVBAR {
+    height: 17.7rem;
+  }
+
+  .NAVBAR a {
+    display: block;
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: .3s ease;
+  }
+  
+  /* #check:checked~.NAVBAR a {
+    transform: translateY(0);  */
+    /* opacity: 1; */
+    /* transition-delay: calc(.15s * var{--i});
+  } */
+  
+  #check:checked~.NAVBAR a {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: calc(12s * var{--i});
+  }
+
+  .header.scrolled a {
+    font-weight: 700;
+    transition: .5s ease;
+    color: #1f2c56;
+  }
 }
 
 .hero .content {
-  padding: 1.4rem 7%;
   max-width: 60rem;
 }
 
-.hero .content h1 {
+.h1-hero {
   font-size: 5rem;
   color: white;
-  text-shadow: 3px 3px 5px #ffae00;
+  text-shadow: 3px 3px 5px #1f2c56;
+  /* -webkit-text-stroke: 1px #1f2c56; */
   font-weight: 700;
   line-height: 1;
 }
 
-.hero .content p {
+.p-hero {
   font-size: 2rem;
-  text-shadow: 2px 2px 4px #ffae00;
+  text-shadow: 2px 2px 4px #1f2c56;
   font-weight: 700;
   line-height: 1;
   margin-top: 1.5rem;
 }
 
-.hero .content .cta {
+.cta {
+  text-decoration: none;
   margin-top: 1rem;
   display: inline-block;
   padding: 1rem 2.5rem;
   font-size: 1.4rem;
   color: white;
-  background-color: #ffae00;
+  background-color: #000b41;
   text-shadow: 1px 1px 3px #cdb7a2;
   border-radius: 0.5rem;
 }
 
-.hero .content a:hover {
-  background-color: #000b41;
+.content {
+  width: 60%;
+}
+
+.cta:hover {
+  background-color: gray;
+  /* background-color: #00ba89; */
   color: #ffffff;
   text-shadow: 2px 2px 4px #000000;
 }
 
 /* About/Company */
 .company {
-  padding: 8rem 7% 1.4rem;
+  padding: 6rem 7% 1.4rem;
   color: #000000;
   /* background-color: #0 0ff00; */
 }
@@ -126,30 +334,30 @@ body {
   font-size: 2rem;
 }
 
-.company .row {
+.company .row-local {
   display: flex;
 }
 
-.company .row .about-img {
+.company .row-local .about-img {
   flex: 1 1 35rem;
 }
 
-.company .row .about-img img {
+.company .row-local .about-img img {
   width: 90%;
   border-radius: 0.5rem;
 }
 
-.company .row .content {
+.company .row-local .content {
   flex: 1 1 25rem;
   padding: 0 1rem;
 }
 
-.company .row .content h3 {
+.company .row-local .content h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.company .row .content p {
+.company .row-local .content p {
   margin-bottom: 0.7rem;
   font-size: 1.4rem;
   line-height: 1.6;
@@ -161,14 +369,14 @@ body {
   padding: 1rem 2.5rem;
   font-size: 1.4rem;
   color: white;
-  background-color: #000b41;
-  text-shadow: 1px 1px 3px #cdb7a2;
+  background-color: #1f2c56;
+  /* text-shadow: 1px 1px 3px #00ba89; */
   border-radius: 0.5rem;
 }
 .company .content a:hover {
-  background-color: #ffae00;
+  background-color: gray;
   color: #ffffff;
-  text-shadow: 2px 2px 4px #000000;
+  /* text-shadow: 2px 2px 4px #000000; */
 }
 
 /* LayananKami */
@@ -181,7 +389,7 @@ body {
   font-size: 2rem;
 }
 
-.ItSolution .row {
+.ItSolution .row-local {
   display: flex;
   flex-wrap: wrap;
   margin-top: 3.5rem;
@@ -193,23 +401,16 @@ body {
   padding-bottom: 2rem;
 }
 
-.ItSolution .row .menu-card img {
-  border-radius: 50%;
+.ItSolution .row-local .menu-card img {
+  border-radius: 5%;
   width: 60%;
 }
 
-.ItSolution .row .menu-card .menu-card-title {
+.ItSolution .row-local .menu-card .menu-card-title {
   margin-top: 0.5rem;
 }
 
 /* Cara Kerja Kami(Start) */
-.cd-horizontal-timeline {
-  opacity: 0;
-  margin: 2em auto;
-  -webkit-transition: opacity 0.2s;
-  -moz-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-}
 
 .cd-horizontal-timeline::before {
   /* never visible - this is used in jQuery to check the current MQ */
@@ -618,23 +819,26 @@ body {
 /* Cara Kerja Kami(end) */
 
 /* Proyek Terkerjakan Start */
-.Proyek {
+/* .Proyek {
   text-align: center;
   margin-bottom: 3rem;
 }
 .Proyek h2 {
   font-size: 2rem;
-}
+} */
 
-.Proyek .row {
+/* .Proyek .row-local {
   display: flex;
   flex-wrap: wrap;
   margin-top: 3.5rem;
   justify-content: center;
-}
-.Proyek .menu-card {
+} */
+/* .Proyek .menu-card {
   padding-bottom: 2rem;
-}
+  padding: 0 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+} */
 
 /* Proyek Terkerjakan end */
 
@@ -655,6 +859,17 @@ body {
   text-align: center;
   margin-bottom: 0.5rem;
   height: 100%;
+}
+
+/* Efek fade */
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition-duration: .5s;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-item.active {
+  opacity: 1;
 }
 
 /* contact section */
@@ -843,6 +1058,7 @@ footer .col {
     font-size: 75%;
   }
 }
+
 /* Tablet */
 @media (max-width: 768px) {
   html {
@@ -851,7 +1067,7 @@ footer .col {
   #hamburger-menu {
     display: inline-block;
   }
-  .navbar .navbar-nav {
+  .topbar .topbar-top {
     position: absolute;
     top: 100%;
     right: -100%;
@@ -860,17 +1076,17 @@ footer .col {
     height: 100vh;
     transition: 0.3s;
   }
-  .navbar .navbar-nav .active {
+  .topbar .topbar-top .active {
     right: 0;
   }
 
-  .navbar .navbar-nav a {
+  .topbar .topbar-top a {
     color: #000000;
     display: block;
     margin: 1.5rem;
   }
 
-  .company .row .about-img img {
+  .company .row-local .about-img img {
     height: 24rem;
   }
 
@@ -886,4 +1102,42 @@ footer .col {
   .company .content p {
     flex-wrap: wrap;
   }
+}
+
+.Proyek {
+  text-align: center;
+  margin-top: 20px
+}
+
+.Proyek h2 {
+  font-size: 2rem;
+}
+
+/* Style for the slider container */
+.slider-container {
+  max-width: 90%; /* Adjust the width as needed */
+  margin: 0 auto;
+}
+
+/* Style for the slider */
+.slider {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/* Style for the menu card */
+.menu-card {
+  flex: 0 0 auto;
+  width: calc(100% / 4); /* Adjust the width of the cards based on the number of slidesToShow */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Style for the thumbnail images */
+.img-thumbnail-proyek {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
