@@ -12,18 +12,55 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet" />
+    
+    
+    <!-- Style OWL -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <link href="css/fontawesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css" /> -->
 
+    <!-- Style Slider -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+    <!-- JS Slider -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- <link href="css/styleOwl.css" rel="stylesheet" type="text/css" /> -->
+
+    <!-- Style Timeline -->
+    <link href="timeline-master/dist/css/timeline.min.css" rel="stylesheet">
+
+    <!-- boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+      /** Paralax Home Page */
+    .paralax1 {
+      padding: 50px; /* Sesuaikan dengan kebutuhan Anda */
+      background-image: url('img/wp2.png');
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: fixed;
+      background-size: cover;
+      position: relative;
+    }
+    </style>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+    rel="stylesheet"
+    />
     <!-- Feathers Icon -->
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
     <!-- Navbar Start -->
-    <nav class="navbar">
-      <a href="#" class="navbar-logo">
+    <!-- <nav class="topbar">
+      <a href="#" class="topbar-logo">
         <img src="img/atm-logo-.png" alt="LogoATM" width="200" height="50" />
       </a>
 
-      <div class="div navbar-nav active">
+      <div class="div topbar-top active">
         <a href="#">Home</a>
         <a href="#about">Company</a>
         <a href="#It">IT Solution</a>
@@ -33,28 +70,80 @@
       <div class="div navbar-extra">
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
-    </nav>
+    </nav> -->
+
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="img/atm-logo-.png" alt="LogoATM" width="200" height="50" />
+      </a>
+
+      <input type="checkbox" id="check">
+      <label for="check" class="icons">
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <i class='bx bx-x' id="close-icon"></i>
+      </label>
+
+      <nav class="NAVBAR">
+        <a href="#" style="--i:0;">Home</a>
+        <a href="#about" style="--i:1;">Company</a>
+        <a href="#It" style="--i:2;">IT Solution</a>
+        <a href="#News" style="--i:3;">News & Media</a>
+        <a href="#kontak" style="--i:4;">Contact</a>
+      </nav>
+    </header>
     <!-- Navbar End -->
 
-    <!-- Herosection -->
-    <section class="hero" id="home">
-      <main class="content">
-        <h1>Artha Teknologi Mahakarya</h1>
-        <p>Solusi Digital Untuk Semua Kebutuhan Usaha Anda</p>
-        <a href="#" class="cta">Contact Me</a>
-      </main>
+    <section>
+      <div id="carouselExampleCaptions" class="carousel slide carousel-fade">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/4.jpg" class="d-block w-100" style="height: 850px; object-fit: cover;" alt="...">
+            <div class="carousel-caption d-none d-md-flex text-start align-items-center justify-content-start" style="height: 100%;">
+              <div class="content">
+                <h1 class="h1-hero">Artha Teknologi Mahakarya</h1>
+                <p class="p-hero">Solusi Digital Untuk Semua Kebutuhan Usaha Anda</p>
+                <a href="#" class="cta">Contact Me</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/wp2.png" class="d-block w-100" style="height: 850px; object-fit: cover;" alt="...">
+            <div class="carousel-caption d-none d-md-flex text-start align-items-center justify-content-start" style="height: 100%;">
+              <div class="content">
+                <h1 class="h1-hero">Artha Teknologi Mahakarya</h1>
+                <p class="p-hero">Solusi Digital Untuk Semua Kebutuhan Usaha Anda</p>
+                <a href="#" class="cta">Contact Me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </section>
     <!-- Herosection end -->
 
     <!-- About/Company -->
     <section id="about" class="company">
-      <div class="content">
-        <h2>PT. Artha Teknologi Mahakarya</h2>
-      </div>
-      <div class="row">
-        <div class="content">
+      <div class="row-local">
+        <div class="content" style="margin-right: 50px;">
+          <h2>PT. Artha Teknologi Mahakarya</h2>
           <h3>Brief Explanation About Us</h3>
-          <p>PT Artha Teknologi Mahakarya adalah sebuah perusahaan yang berdiri di tahun 2017 yang berfokus pada pembuatan dan pengembangan sistem berbasis Digital.</p>
+          <p>
+            PT Artha Teknologi Mahakarya adalah sebuah perusahaan yang berdiri
+            di tahun 2017 yang berfokus pada pembuatan dan pengembangan sistem
+            berbasis Digital.
+          </p>
           <a href="#" class="cta">Lebih Tentang Kami</a>
         </div>
 
@@ -66,12 +155,16 @@
     <!-- About/Company end -->
 
     <!-- ITSOLUTION START -->
-    <section id="It" class="ItSolution">
+    <!-- <section id="It" class="ItSolution">
       <h2>Layanan Kami</h2>
 
-      <div class="row">
+      <div class="row-local">
         <div class="menu-card">
-          <img src="img/webdev.png" alt="WebDevplompent" class="menu-card-img" />
+          <img
+            src="img/webdev.png"
+            alt="WebDevplompent"
+            class="menu-card-img"
+          />
           <h3 class="menu-card-title">Web Devplompent</h3>
         </div>
         <div class="menu-card">
@@ -79,204 +172,375 @@
           <h3 class="menu-card-title">Enterprise Servise Bus</h3>
         </div>
         <div class="menu-card">
-          <img src="img/education.png" alt="WebDevplompent" class="menu-card-img" />
+          <img
+            src="img/education.png"
+            alt="WebDevplompent"
+            class="menu-card-img"
+          />
           <h3 class="menu-card-title">Education Technology</h3>
         </div>
         <div class="menu-card">
-          <img src="img/mobile.png" alt="WebDevplompent" class="menu-card-img" />
+          <img
+            src="img/mobile.png"
+            alt="WebDevplompent"
+            class="menu-card-img"
+          />
           <h3 class="menu-card-title">Mobile Apps Devplompent</h3>
         </div>
         <div class="menu-card">
-          <img src="img/payment.png" alt="WebDevplompent" class="menu-card-img" />
+          <img
+            src="img/payment.png"
+            alt="WebDevplompent"
+            class="menu-card-img"
+          />
           <h3 class="menu-card-title">Digital Payment Solutions</h3>
         </div>
       </div>
+    </section> -->
+    <section class="body">
+      <div class="slider-local">
+        <div class="item-local">
+          <img src="img/payment.png" alt="" style="border-radius: 20px; width: 225px;">
+          <h1>Slide 1</h1>
+        </div>
+        <div class="item-local">
+          <img src="img/payment.png" alt="" style="border-radius: 20px; width: 225px;">
+          <h1>Slide 2</h1>
+        </div>
+        <div class="item-local">
+          <img src="img/payment.png" alt="" style="border-radius: 20px; width: 225px;">
+          <h1>Slide 3</h1>
+        </div>
+        <div class="item-local">
+          <img src="img/payment.png" alt="" style="border-radius: 20px; width: 225px;">
+          <h1>Slide 4</h1>
+        </div>
+        <div class="item-local">
+          <img src="img/payment.png" alt="" style="border-radius: 20px; width: 225px;">
+          <h1>Slide 5</h1>
+        </div>
+        <div class="item-local">
+          <img src="img/payment.png" alt="" style="border-radius: 20px; width: 225px;">
+          <h1>Slide 6</h1>
+        </div>
+        <div class="item-local">
+          <img src="img/payment.png" alt="" style="border-radius: 20px; width: 225px;">
+          <h1>Slide 7</h1>
+        </div>
+        <button id="next">></button>
+        <button id="prev"><</button>
+      </div>
     </section>
+
     <!-- ITSOLUTION END -->
 
     <!-- Cara Kerja Kami (Start) -->
-    <section class="cd-horizontal-timeline">
-      <div class="timeline">
-        <div class="events-wrapper">
-          <div class="events">
-            <ol>
-              <li><a href="#0" data-date="16/01/2014" class="selected">16 Jan</a></li>
-              <li><a href="#0" data-date="28/02/2014">28 Feb</a></li>
-              <li><a href="#0" data-date="20/04/2014">20 Mar</a></li>
-              <li><a href="#0" data-date="20/05/2014">20 May</a></li>
-              <li><a href="#0" data-date="09/07/2014">09 Jul</a></li>
-              <li><a href="#0" data-date="30/08/2014">30 Aug</a></li>
-              <li><a href="#0" data-date="15/09/2014">15 Sep</a></li>
-              <li><a href="#0" data-date="01/11/2014">01 Nov</a></li>
-              <li><a href="#0" data-date="10/12/2014">10 Dec</a></li>
-              <li><a href="#0" data-date="19/01/2015">29 Jan</a></li>
-              <li><a href="#0" data-date="03/03/2015">3 Mar</a></li>
-            </ol>
-
-            <span class="filling-line" aria-hidden="true"></span>
+    <section class="paralax1">
+      <div class="timeline" style="position: relative; z-index: 2;">
+        <div class="timeline__wrap">
+          <div class="timeline__items">
+            <div class="timeline__item">
+              <div class="timeline__content">
+                <h2>Project Brief</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__content">
+                <h2>Research</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum </p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__content">
+                <h2>Prototyping</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__content">
+                <h2>Development</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__content">
+                <h2>Infrastructure Set Up</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum </p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__content">
+                <h2>Local User Access Testing</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__content">
+                <h2>Live Stage Testing</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__content">
+                <h2>Product Launch</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum </p>
+              </div>
+            </div>
           </div>
-          <!-- .events -->
         </div>
-        <!-- .events-wrapper -->
-
-        <ul class="cd-timeline-navigation">
-          <li><a href="#0" class="prev inactive">Prev</a></li>
-          <li><a href="#0" class="next">Next</a></li>
-        </ul>
-        <!-- .cd-timeline-navigation -->
       </div>
-      <!-- .timeline -->
-
-      <div class="events-content">
-        <ol>
-          <li class="selected" data-date="16/01/2014">
-            <h2>Horizontal Timeline</h2>
-            <em>January 16th, 2014</em>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum
-              ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-            </p>
-          </li>
-
-          <li data-date="28/02/2014">
-            <h2>Event title here</h2>
-            <em>February 28th, 2014</em>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum
-              ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-            </p>
-          </li>
-
-          <li data-date="20/04/2014">
-            <h2>Event title here</h2>
-            <em>March 20th, 2014</em>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum
-              ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-            </p>
-          </li>
-
-          <li data-date="20/05/2014">
-            <h2>Event title here</h2>
-            <em>May 20th, 2014</em>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum
-              ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-            </p>
-          </li>
-
-          <li data-date="09/07/2014">
-            <h2>Event title here</h2>
-            <em>July 9th, 2014</em>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum
-              ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-            </p>
-          </li>
-
-          <li data-date="30/08/2014">
-            <h2>Event title here</h2>
-            <em>August 30th, 2014</em>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum
-              ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-            </p>
-          </li>
-
-          <li data-date="15/09/2014">
-            <h2>Event title here</h2>
-            <em>September 15th, 2014</em>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum
-              ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-            </p>
-          </li>
-
-          <li data-date="01/11/2014">
-            <h2>Event title here</h2>
-            <em>November 1st, 2014</em>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum
-              ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-            </p>
-          </li>
-
-          <li data-date="10/12/2014">
-            <h2>Event title here</h2>
-            <em>December 10th, 2014</em>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum
-              ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-            </p>
-          </li>
-
-          <li data-date="19/01/2015">
-            <h2>Event title here</h2>
-            <em>January 19th, 2015</em>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum
-              ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-            </p>
-          </li>
-
-          <li data-date="03/03/2015">
-            <h2>Event title here</h2>
-            <em>March 3rd, 2015</em>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum
-              ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-            </p>
-          </li>
-        </ol>
-      </div>
-      <!-- .events-content -->
-      <!-- Cara Kerja Kami (End) -->
     </section>
     <!-- Cara Kerja Kami (End) -->
 
     <!-- proyek Terkerjakan -->
     <section class="Proyek">
       <h2>Proyek Terkerjakan</h2>
-      <div id="carouselExample" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="row">
-              <div class="col-md-2">
-                <img src="img/BN Transparant.png" alt="Gambar 1" class="img-thumbnail" />
+      <div class="slider-container">
+          <div class="slider" style="padding: 30px;">
+              <div class="menu-card">
+                  <img src="img/BN Transparant.png" alt="Gambar 2" class="img-thumbnail-proyek" />
               </div>
-              <div class="col-md-2">
-                <img src="img/TheMaj-logo.png" alt="Gambar 2" class="img-thumbnail" />
+              <div class="menu-card">
+                  <img src="img/AncoraLogoDark.png" alt="Gambar 1" class="img-thumbnail-proyek" />
               </div>
-              <div class="col-md-2">
-                <img src="img/MNK Transparant.png" alt="Gambar 3" class="img-thumbnail" />
+              <div class="menu-card">
+                  <img src="img/caraka-logo.png" alt="Gambar 3" class="img-thumbnail-proyek" />
               </div>
-              <div class="col-md-2">
-                <img src="img/caraka-logo.png" alt="Gambar 4" class="img-thumbnail" />
+              <div class="menu-card">
+                  <img src="img/ILBB Transparant.png" alt="Gambar 5" class="img-thumbnail-proyek" />
               </div>
-              <div class="col-md-2">
-                <img src="img/ILBB Transparant.png" alt="Gambar 5" class="img-thumbnail" />
+              <div class="menu-card">
+                  <img src="img/MNK Transparant.png" alt="Gambar 5" class="img-thumbnail-proyek" />
               </div>
-            </div>
+              <div class="menu-card">
+                  <img src="img/TheMaj-logo.png" alt="Gambar 5" class="img-thumbnail-proyek" />
+              </div>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+        <a
+          class="carousel-control-prev"
+          href="#carouselExample"
+          role="button"
+          data-slide="prev"
+        >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+        <a
+          class="carousel-control-next"
+          href="#carouselExample"
+          role="button"
+          data-slide="next"
+        >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
       </div>
-    </section>
-
+  </section>
+    
     <!-- Contact Start -->
     <section id="kontak" class="Contacts">
       <h2>Contacts Me</h2>
+      <p>
+        Equity Tower Lt. 41 Sudirman Central Business District (SCBD) Kav. 52,
+        Jl. Jenderal Sudirman No.53 No.Kav 52-53, Daerah Khusus Ibukota Jakarta
+        12190
+      </p>
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.282841774687!2d106.804260088855!3d-6.226389799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1505affffff%3A0x301b8a0f5d2c33ed!2sEquity%20Tower!5e0!3m2!1sid!2sid!4v1710901192697!5m2!1sid!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+        <form action="">
+          <div class="input-group">
+            <i data-feather="user"></i>
+            <input type="text" placeholder="nama" />
+          </div>
+          <div class="input-group">
+            <i data-feather="mail"></i>
+            <input type="text" placeholder="email" />
+          </div>
+          <div class="input-group">
+            <i data-feather="phone"></i>
+            <input type="text" placeholder="no handphone" />
+          </div>
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control custom-input"
+              placeholder="solusi yang dibutuhkan"
+            />
+          </div>
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control custom-input"
+              placeholder="informasi tambahan"
+            />
+          </div>
+          <button type="submit" class="btn">kirim pesan</button>
+        </form>
+      </div>
     </section>
     <!-- Contact end -->
+    
 
+    <!-- JS Timeline -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+    <!-- <script src="js/app.js"></script> -->
+    
+    <!-- Footer start -->
+    <footer>
+      <div class="row">
+        <div class="col">
+          <img src="img/atm-logo-.png" class="logo" />
+          <p>
+            Equity Tower Lt. 41 Sudirman Central Business District (SCBD) Kav.
+            52, Jl. Jenderal Sudirman No.53 No.Kav 52-53, Daerah Khusus Ibukota
+            Jakarta 12190
+          </p>
+        </div>
+        <div class="col">
+          <h3>Office</h3>
+          <p>Ancora Group-ATM</p>
+          <p>Jakarta Selatan, Indonesia</p>
+          <p class="email-id">Marketing@ATMahakarya</p>
+          <h4>+62-81294655605</h4>
+        </div>
+        <div class="col">
+          <h3>Link</h3>
+          <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#about">company</a></li>
+            <li><a href="#It">IT Solution</a></li>
+            <li><a href="">News & Media</a></li>
+            <li><a href="#kontak">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>News&Media</h3>
+          <form>
+            <i data-feather="mail"></i>
+            <input type="email" placeholder="enter your email" required />
+            <button type="submit"><i data-feather="send"></i></button>
+          </form>
+          <div class="social-icons">
+            <i class="sosial" data-feather="facebook"></i>
+            <i class="sosial" data-feather="instagram"></i>
+            <i class="sosial" data-feather="twitter"></i>
+          </div>
+        </div>
+      </div>
+      <div class="garis-horizontal"></div>
+      <p>@2024 PT Artha Teknologi Mahakarya, All Rights Reserved</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="timeline-master/dist/js/timeline.min.js"></script>
+    <script>
+      let items = document.querySelectorAll('.slider-local .item-local');
+      let next = document.getElementById('next');
+      let prev = document.getElementById('prev');
+
+
+      let active = 3;
+      function loadShow(){
+          let stt = 0;
+          for(var i = active + 1; i < items.length; i++){
+              stt++;
+              items[i].style.transform = `translateX(${120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(-1deg)`;
+              items[i].style.zIndex = -stt;
+              items[i].style.filter = 'blur(5px)';
+              items[i].style.opacity = stt > 1 ? 0 : 0.6;
+          }
+          stt = 0;
+          for(var i = active - 1; i >= 0; i--){
+              stt++;
+              items[i].style.transform = `translateX(${-120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(-1deg)`;
+              items[i].style.zIndex = -stt;
+              items[i].style.filter = 'blur(5px)';
+              items[i].style.opacity = stt > 1 ? 0 : 0.6;
+          }
+      }
+      loadShow();
+    </script>
+    <script>
+      window.addEventListener('scroll', () => {
+        const TopBar = document.querySelector('.header');
+
+        if (window.scrollY > 0) {
+          TopBar.classList.add('scrolled');
+        } else {
+          TopBar.classList.remove('scrolled');
+        }
+      });
+    </script>
+    <script>
+      timeline(document.querySelectorAll('.timeline'), {
+        forceVerticalMode: 800,
+        mode: 'horizontal',
+        visibleItems: 3
+      });
+    </script>
+    <!-- Footer end -->
     <!-- Feathers Icons -->
+    <script>
+      $(document).ready(function(){
+          // Inisialisasi Slick slider
+          $('.slider').slick({
+              slidesToShow: 4, // Jumlah slide yang ingin ditampilkan secara default
+              slidesToScroll: 1,
+              autoplay: true,
+              autoplaySpeed: 2000,
+              // Tambahan pengaturan lainnya
+          });
+  
+          // Cek lebar layar dan ubah jumlah slideToShow sesuai dengan resolusi layar
+          function checkWidth() {
+            var windowWidth = $(window).width(); // Mendapatkan lebar layar
+          
+            if (windowWidth < 768) { // Jika lebar layar kurang dari 768px (ukuran mobile)
+                if ($('.slider').hasClass('slick-initialized')) { // Periksa apakah slider sudah diinisialisasi
+                    $('.slider').slick('unslick'); // Hapus slider yang sudah ada
+                }
+                $('.slider').slick({ // Inisialisasi kembali slider dengan opsi yang sesuai untuk mobile
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000
+                });
+            } else if (windowWidth >= 768 && windowWidth < 992) { // Jika lebar layar antara 768px dan 991px (ukuran tablet)
+                if ($('.slider').hasClass('slick-initialized')) { // Periksa apakah slider sudah diinisialisasi
+                    $('.slider').slick('unslick'); // Hapus slider yang sudah ada
+                }
+                $('.slider').slick({ // Inisialisasi kembali slider dengan opsi yang sesuai untuk tablet
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000
+                });
+            } else { // Untuk lebar layar yang lebih besar (ukuran komputer)
+                if ($('.slider').hasClass('slick-initialized')) { // Periksa apakah slider sudah diinisialisasi
+                    $('.slider').slick('unslick'); // Hapus slider yang sudah ada
+                }
+                $('.slider').slick({ // Inisialisasi kembali slider dengan opsi yang sesuai untuk desktop
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000
+                });
+            }
+        }
+  
+          // Jalankan fungsi checkWidth() saat dokumen dimuat dan saat ukuran layar berubah
+          $(window).on('load resize', checkWidth);
+      });
+    </script>
     <script>
       feather.replace();
     </script>
